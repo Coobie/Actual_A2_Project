@@ -4,7 +4,7 @@
     <b><%="Model of Device:  "%></b><%= f.text_field :device_model %><br>
     <b><%="Type of Device:  "%></b><%=f.select(:device_type,[['Phone'],['Tablet'],['Laptop'],['Other']], include_blank: true) %><br>
    <b><%="Device manufactor:  "%></b><%= f.text_field :device_manufacturer %><br>
-   <b><%="Price of original device: "%></b><%=f.number_field :original_price, :step => "0.01"  %><br>
+   <b><%="Price of original device: "%></b><%=f.text_field :device_cost, size: 10 %><br>
    <%= "The format for the dates is"%> <b><%="YYYY-MM-DD"%></b><br>
   <b><%="Start Date: "%></b><%=f.text_field :start_date,"data-provide"=>'datepicker'%><br>
 <b><%="Expiry Date: "%></b><%=f.text_field :expiry_date,"data-provide"=>'datepicker'%><br>

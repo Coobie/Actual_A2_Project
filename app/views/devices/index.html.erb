@@ -1,5 +1,5 @@
-<h1>Devices#over_view</h1>
-<p>Find me in app/views/devices/index.html.erb</p>
+<h1>All Devices</h1>
+<%= link_to "Advanced Search",new_search_path %>
 <% @devices.each do |n| %>
 <li> <%= n.device_name + " | " + n.device_type %>
 <%= link_to "show",device_path(n) %>

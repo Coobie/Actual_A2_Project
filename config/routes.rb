@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'searches/new'
+
+  get 'calendar_page/index'
+
   get 'devices/index', to: 'devices#index', as: :index
   get 'devices/new', to: 'devices#new'
   get 'devices/:id/edit', to: 'devices#edit', as: :editing
@@ -8,6 +12,7 @@ Rails.application.routes.draw do
 
 
   resources :devices
+  resources :searches
   root 'welcome#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

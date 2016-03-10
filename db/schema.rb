@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160310100308) do
+ActiveRecord::Schema.define(version: 20160310153137) do
 
   create_table "devices", force: :cascade do |t|
     t.string   "device_name"
@@ -23,6 +23,21 @@ ActiveRecord::Schema.define(version: 20160310100308) do
     t.string   "device_manufacturer"
     t.datetime "created_at",                                   null: false
     t.datetime "updated_at",                                   null: false
+  end
+
+  create_table "searches", force: :cascade do |t|
+    t.string   "device_name"
+    t.string   "device_manufacturer"
+    t.decimal  "min_price"
+    t.decimal  "max_price"
+    t.string   "device_type"
+    t.string   "device_model"
+    t.date     "start_date"
+    t.date     "expiry_date"
+    t.date     "expiry_date_min"
+    t.date     "start_date_min"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
   end
 
 end
