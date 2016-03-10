@@ -1,0 +1,7 @@
+<h1>Devices#over_view</h1>
+<p>Find me in app/views/devices/index.html.erb</p>
+<% @devices.each do |n| %>
+<li> <%= n.device_name + " | " + n.device_type %>
+<%= link_to "show",device_path(n) %>
+<%= link_to "edit",edit_device_path(n) %> </li>
+<% end %>
