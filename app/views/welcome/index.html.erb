@@ -1,2 +1,18 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<% if user_signed_in? %>
+  <h1>Welcome <%= current_user.first_name %>
+  <%= current_user.last_name %> </h1>
+  <h4> Please find the instructions on how to use this system below </h4>
+  <p>
+  </p>
+  
+<% else %>
+<h1>Welcome</h1>
+<h3>Please <%= link_to 'Sign in', new_user_session_path %> to Access this site </h3>
+<% end %>
+<p>Things to do:
+  <li>Edit accounts from admin </li>
+  <li>New user from admin</li>
+  <li>pundit</li>
+  <li>hide sites from access if not logged in</li>
+
+</p>

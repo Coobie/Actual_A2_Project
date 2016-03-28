@@ -1,18 +1,17 @@
 Rails.application.routes.draw do
+devise_for :users, :controllers => { registrations: 'registrations' }
   get 'searches/new'
-
   get 'calendar_page/index'
-
   get 'devices/index', to: 'devices#index', as: :index
   get 'devices/new', to: 'devices#new'
   get 'devices/:id/edit', to: 'devices#edit', as: :editing
   get 'devices/:id', to: 'devices#show'
-
   get 'welcome/index'
 
 
   resources :devices
   resources :searches
+  resources :users
   root 'welcome#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
